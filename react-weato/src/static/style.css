@@ -1,0 +1,184 @@
+.main{ /* 배경 설정 */
+    text-align:center;
+    justify-content: center;
+    display: flex; 
+    background:url(../image/back.png);
+    background-size: cover;
+    padding:7%;
+}
+ .sub-main{/* 박스 설정 */
+    justify-content: center;
+    height:530px;
+    width: 450px;
+    box-shadow: 11px 12px 13px 12px rgb(207,207,207);
+    padding:8%;
+    border-radius: 50px;
+    background-color: white;
+} 
+.Login-title{/* 로그인 제목 */
+    text-align:center;
+    margin-bottom: 10%;
+    font-size: 50px;
+    color:rgba(53, 53, 73, 0.847);
+}
+
+.login-input{/* 로그인 입력창 */
+    padding-left: 15%;
+    margin:5%;
+    width:250px;
+    height:50px;
+    border-radius: 60px;
+    box-shadow: insert 0px 0px 25px 0px ;
+    outline-color: #5BB7DE;
+    border:2px solid darkgrey;
+    font-size: 10px;
+} 
+
+.ID-icon{/* ID 아이콘 */
+    height: 50px;
+    width:10px;
+    position: absolute;
+    padding: 15px 0 0 30px;
+    color:darkgrey;
+}
+
+.PW-icon{/* PW 아이콘 */
+    height: 50px;
+    width:10px;
+    position: absolute;
+    padding: 92px 0 0 30px;
+    color:darkgrey;
+}
+.login-button-style{/* 로그인 버튼 위치 */
+    padding-top: 20px;
+}
+.login-button{/* 로그인 버튼 설정 */
+    width:100px;
+    height:40px;   
+    margin-top:10%;
+    border-radius: 60px;
+    background-color: #5BB7DE;
+    color:white;
+    border:none;
+    font-size: 20px;
+}
+.login-button:hover{/* 로그인 버튼에 마우스 올릴 시 */
+    background-color:black;
+    color:white;
+    box-shadow: 5px 5px 0 rgb(0,0,0,0.5);
+}
+
+.link{/* link 설정 */
+    margin-right: 10%; 
+    margin-top:10%;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+a{/* link 컬러 */
+    color:#5BB7DE;
+}
+.SignUp-title{/* 회원가입 제목 */
+    text-align:center;
+    font-size: 40px;
+    margin-bottom: 10%;
+    color:rgba(53, 53, 73, 0.847);
+}
+.SignUp-input{/* 회원가입 입력창 */
+    padding-left: 5%;
+    margin-top:5%;
+    width:300px;
+    height:45px;
+    border-radius: 60px;
+    border:2px solid darkgrey;
+    outline-color: #5BB7DE;
+    font-size:10px;
+    /* box-shadow: insert 0px 0px 25px 0px #888; */
+    
+}
+.SignUp-button{/* 회원가입 버튼 */
+    width:130px;
+    height:40px;
+    margin-top:10%;
+    border-radius: 60px;
+    background-color: #5BB7DE;
+    color:white;
+    font-size: 15px;
+    border:none;
+}
+.SignUp-button:hover{/* 회원가입 버튼에 마우스 올릴 시 */
+    background-color:black;
+    color:white;
+    box-shadow: 5px 5px 0 rgb(0,0,0,0.5);
+}
+
+@media (max-width:1024px){
+    .main{
+        padding:5%;
+    }
+    .sub-main{
+       padding:10%;
+    }
+    .Login-title{
+        padding-top: 10%;
+        font-size:30px;
+        margin-bottom:30px;
+    }
+    .login-input{
+        height:50px;
+        width:250px;
+        padding-left: 15%;
+    }
+    .login-button{
+        height: 40px;
+        width:80px;
+        font-size:15px;
+    }
+    .ID-icon{
+        height:30px;
+        padding: 25px 0 0 4%;
+    }
+    .PW-icon{
+        height:30px;
+        padding: 100px 0 0 4%;
+    }
+    .link{
+        font-size:15px;
+    }
+}
+@media (max-width: 768px){
+    .main{
+        padding:5%;
+    }
+    .sub-main{
+       padding:10%;
+    }
+    .Login-title{
+        padding-top: 10%;
+        font-size:30px;
+        margin-bottom:30px;
+    }
+    .login-input{
+        height:50px;
+        width:250px;
+        padding-left: 15%;
+    }
+    .login-button{
+        height: 40px;
+        width:80px;
+        font-size:15px;
+    }
+    .ID-icon{
+        height:30px;
+        padding: 25px 0 0 6%;
+    }
+    .PW-icon{
+        height:30px;
+        padding: 108px 0 0 6%;
+    }
+    .link{
+        font-size:15px;
+    }
+}
+
+
