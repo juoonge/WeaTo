@@ -1,3 +1,4 @@
+from django.shortcuts import redirect, render, get_object_or_404
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -10,6 +11,8 @@ from .models import WeatherComment
 from .serializer import WeatherCommentSerializer, WeatherCommentCreateSerializer
 from django.db.models import Q
 
+def cctv(request):
+    return render(request,'cctv.html')
 class TotalWeatherCommentAPIView(APIView):
     def get(self, request):
         total_weathercomment = WeatherComment.objects.all()
