@@ -4,19 +4,19 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=253bd596a29c6db40d6ec6054e201c83"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=253bd596a29c6db40d6ec6054e201c83&libraries=services"></script>
+        <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=253bd596a29c6db40d6ec6054e201c83"></script>
         <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     </head>
     <body>
-        
         <button onclick="addCctv()">CCTV로 확인하기</button>
         <div id="map" style="width:100%;height:600px;"></div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script type="text/javascript">
+        <script type="text/javascript"> 
             let mapContainer = document.getElementById('map'), // 지도를 표시할 div  
             mapOption = { 
-                center: new kakao.maps.LatLng(36.550701, 127.400000), // 지도의 중심좌표
+                center: new kakao.maps.LatLng(34.550701, 127.400000), // 지도의 중심좌표
                 level: 6// 지도의 확대 레벨
             };
 
@@ -24,6 +24,23 @@
 
             window.addEventListener("load", function (event) {
                 getCurrentPosBtn();
+
+                // // 주소-좌표 변환 객체를 생성
+                var geocoder = new kakao.maps.services.Geocoder();
+
+                let loc=JSON.parse(sessionStorage.getItem("location"));
+                let coords=new kakao.maps.LatLng(loc.lat,loc.lng);
+
+                let callback=function(result, status) {
+                    if (status === kakao.maps.services.Status.OK) {
+                        // 결과값 어떻게 표현할지? 일단 콘솔에
+                        //console.log(result[0].road_address); 도로명 주소
+                        console.log(result[0].address.address_name);
+
+                    }   
+                };
+                geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+                                
             });
 
             function locationLoadSuccess(pos) {
@@ -33,6 +50,7 @@
                 let lat=pos.coords.latitude
                 let lng=pos.coords.longitude
 
+                // 위도, 경도 저장
                 let locationObj={'lat':lat,'lng':lng};
                 sessionStorage.setItem('location',JSON.stringify(locationObj));
 
@@ -58,13 +76,13 @@
                 navigator.geolocation.getCurrentPosition(locationLoadSuccess,locationLoadError);
             };
 
+
             // CCTV로 확인하기 버튼을 눌렀을 때의 동작
             let cctv=[];
             function addCctv(){
                 // 현재위치 받아옴
                 let location=JSON.parse(sessionStorage.getItem("location"));
                 console.log("location",location)
-
                 
                 let apikey = "539decf6895149d4841444601842430f";
                 // let type = "its";

@@ -13,6 +13,7 @@ from django.db.models import Q
 
 def cctv(request):
     return render(request,'cctv.html')
+
 class TotalWeatherCommentAPIView(APIView):
     def get(self, request):
         total_weathercomment = WeatherComment.objects.all()
