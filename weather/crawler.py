@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By 
 from bs4 import BeautifulSoup
 import time
+import datetime
 
 def Crawler(location):
     soups = []
@@ -99,3 +100,31 @@ def Humidity(soups):
                 temp.append(j.text)
             humidities['weathernews'] = temp
     return humidities
+
+
+def now(location, service, soups):
+    state = {}
+    now = datetime.datetime.now()
+    weekdays = ['월', '화', '수', '목', '금', '토', '일']
+    state['year'] = now.year
+    state['month'] = now.month
+    state['day'] = now.day
+    state['location'] = location
+    state['hour'] = now.hour
+    state['minute'] = now.minute
+    state['weekday'] = weekdays[now.weekday()]
+    t = Temperature(soups)
+    r = Rainprobability(soups)
+    h = Humidity(soups)
+    state['temperature'] = t[service][0]
+    state['rain_prob'] = r[service][0]
+    state['humidity'] = h[service][0]
+    if service == 'weather':
+        state['wind'] = soups[0].select('dd.desc')[2].text
+    elif service == 'aqweather':
+        state['wind'] = soups[1].select('dd.desc')[2].text
+    elif service == 'weatherchannel':
+        state['wind'] = soups[2].select('dd')[2].text
+    elif service == 'weathernews':
+        state['wind'] = soups[3].select('dd')[2].text
+    return state
