@@ -5,6 +5,8 @@ from django.conf.urls.static import static
 
 from .views import TotalWeatherCommentAPIView, LocalWeatherCommentAPIView, WeatherCreateAPIView
 
+app_name='toilet'
+
 urlpatterns = [
     path('weather/',views.cctv,name='cctv'),
     path('total/', TotalWeatherCommentAPIView.as_view()),
