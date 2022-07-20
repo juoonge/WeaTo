@@ -190,3 +190,4 @@ cython_debug/
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij
 
 .idea/
+*.DS_Store
