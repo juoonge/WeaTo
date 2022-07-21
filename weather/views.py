@@ -12,9 +12,8 @@ from .models import WeatherComment
 from .serializer import WeatherCommentSerializer, WeatherCommentCreateSerializer
 from django.db.models import Q
 from .permissions import CustomReadOnly
-
+from users.models import NewUser
 def cctv(request):
-   
 
     return render(request,'cctv.html')
 
@@ -36,12 +35,18 @@ class LocalWeatherCommentAPIView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 class WeatherCreateAPIView(APIView):
-    permission_classes = [CustomReadOnly] #작성자만 수정 가능
+    permission_classes = [permissions.IsAuthenticated,CustomReadOnly] #작성자만 수정 가능
     
     def post(self, request):
+        user = NewUser.objects.get(user_name = self.request.user) 
+        user.create_comment = True 
+        user.save()
+
         serializer = WeatherCommentCreateSerializer(data=request.data)
+    
         if serializer.is_valid():
-            serializer.save()
+            serializer.save(author = self.request.user)
+            
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
