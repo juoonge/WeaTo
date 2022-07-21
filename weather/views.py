@@ -1,6 +1,6 @@
 from xml.dom import ValidationErr
 from django.shortcuts import redirect, render, get_object_or_404
-from rest_framework import status
+from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import generics,mixins,permissions
@@ -11,8 +11,11 @@ from rest_framework import viewsets
 from .models import WeatherComment
 from .serializer import WeatherCommentSerializer, WeatherCommentCreateSerializer
 from django.db.models import Q
+from .permissions import CustomReadOnly
 
 def cctv(request):
+   
+
     return render(request,'cctv.html')
 
 class TotalWeatherCommentAPIView(APIView):
@@ -22,6 +25,8 @@ class TotalWeatherCommentAPIView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 class LocalWeatherCommentAPIView(APIView):
+    permission_classes = [permissions.IsAuthenticated] #로그인 되어 있어야만 볼 수 있음
+    
     def get(self, request, location):
         start_date = datetime.date.today()
         end_date = start_date + datetime.timedelta(days=-1)
@@ -31,6 +36,8 @@ class LocalWeatherCommentAPIView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 class WeatherCreateAPIView(APIView):
+    permission_classes = [CustomReadOnly] #작성자만 수정 가능
+    
     def post(self, request):
         serializer = WeatherCommentCreateSerializer(data=request.data)
         if serializer.is_valid():
