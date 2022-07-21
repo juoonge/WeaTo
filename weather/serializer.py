@@ -1,4 +1,5 @@
-from rest_framework import serializers
+from dataclasses import fields
+from rest_framework import serializers,generics,mixins
 from .models import WeatherComment
 
 # 조회용 Serializer
@@ -12,3 +13,9 @@ class WeatherCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = WeatherComment
         fields = ('location','temperature', 'sky', 'humidity', 'wind', 'rain', 'description', 'scene')
+
+# 좋아요
+# class LikeSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model=LikeMarks
+#         fields='__all__'

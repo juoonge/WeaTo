@@ -6,7 +6,7 @@ import {faLock} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-function LoginPage() {
+function Login() {
   const [ID, setID] = useState("");
   const [PW, setPW] = useState(""); 
   
@@ -39,4 +39,4 @@ function LoginPage() {
     );
   }
 
-export default LoginPage;
+export default Login;
