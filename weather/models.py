@@ -1,4 +1,5 @@
 from django.db import models
+#from users.models import NewUser
 
 class WeatherComment(models.Model):
     location = models.CharField(max_length=30)
@@ -13,3 +14,7 @@ class WeatherComment(models.Model):
 
     def __str__(self):
         return self.location + '\t' + str(self.date)
+
+# class LikeMarks(models.Model):
+#     user = models.ForeignKey(NewUser, on_delete=models.CASCADE, blank=True, null=True, related_name="likemarks")
+#     #wcomment = models.ForeignKey(WeatherComment, on_delete=models.CASCADE, related_name="likemarks")
