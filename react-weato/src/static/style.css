@@ -47,7 +47,7 @@ body {
     text-align:center;
     justify-content: center;
     display: flex; 
-    background:url(../../public/img/bg_cloud.png);
+    /* background:url(../../public/img/bg_cloud.png); */
     background-size: cover;
     padding:7%;
 }
@@ -246,7 +246,6 @@ a{/* link 컬러 */
 }
 
 /* 등록페이지 */
-
 
 .add-main{/* 등록페이지 배경 */
     justify-content: center;

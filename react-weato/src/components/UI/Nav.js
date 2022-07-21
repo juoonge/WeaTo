@@ -70,10 +70,7 @@ const Nav = () => {
                   <Link to ="/SignUp" className='nav-link' >회원가입</Link>
                 </li>
               </ul>
-              {/* <routes>
-                <Route exact path="/Login" element={Login} />
-                <Route path="/SignUp" element={SignUp} />  
-              </routes> */}
+
             </div>
           </div>
         </nav>

@@ -35,7 +35,7 @@ function SignUp() {
   return (
     <Section id='SignUp'>
             <div
-          className='home-content p-5'
+          className='SignUp-content p-5'
           style={{ backgroundImage: `url(${bgImage})` }}
       >
       <div className='container '>

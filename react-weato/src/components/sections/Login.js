@@ -26,7 +26,7 @@ function Login() {
   return (
     <Section id='Login'>
       <div
-          className='home-content p-5'
+          className='Login-content p-5'
           style={{ backgroundImage: `url(${bgImage})` }}
       >
       <div className='container'>
