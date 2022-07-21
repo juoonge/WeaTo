@@ -5,6 +5,7 @@
 @import './css/Login';
 @import './css/signUp';
 @import './css/footer';
+@import './css/LeftBox';
 *{
 
     font-family: 'Noto Sans KR', sans-serif;
@@ -109,7 +110,6 @@ body {
     width:100px;
     height:40px;   
     margin-top:10%;
-    margin-left:32%;
     border-radius: 60px;
     background-color: #5BB7DE;
     color:white;
@@ -185,7 +185,7 @@ a{/* link 컬러 */
         height: 40px;
         width:80px;
         font-size:15px;
-        margin-left: 35%;
+        
     }
     .login-input{
         height:50px;
@@ -196,6 +196,13 @@ a{/* link 컬러 */
         height: 40px;
         width:80px;
         font-size:15px;
+    }
+    .ID-icon{/* ID 아이콘 */
+        padding: 15px 0 0 30px;
+    }
+    .PW-icon{/* ID 아이콘 */
+        padding: 15px 0 0 30px;
+
     }
     .link{
         font-size:15px;
@@ -220,7 +227,18 @@ a{/* link 컬러 */
         height: 40px;
         width:80px;
         font-size:15px;
-        margin-left: 33%;
+    }
+    .ID-icon{/* ID 아이콘 */
+
+
+        padding: 15px 0 0 30px;
+ 
+    }
+    .PW-icon{/* ID 아이콘 */
+
+
+        padding: 15px 0 0 30px;
+
     }
     .link{
         font-size:15px;
