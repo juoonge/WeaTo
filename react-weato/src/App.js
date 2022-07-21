@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-// import React from "react";
-// import {Routes,Route} from 'react-router-dom';
-// import Login from './Login';
-// import SignUp from './SignUp';
-// import './index.css';
-
-// function App() {
-//   return (
-//     <Login/>
-//     // <Routes>
-//     //   <Route path="/" element={<Login />}>
-//     //     <Route path="/SignUp" element={<SignUp />} />
-//     //   </Route>
-//     // </Routes>
-//   );
-// }
-
-// export default App;
-
 import React from 'react';
 
 import Layout from './components/Layout/Layout';
@@ -34,22 +14,21 @@ function App() {
       </Routes>
     </>
 
-=======
-import React from "react";
-//import {Routes,Route} from 'react-router-dom';
-// import Login from './Login';
-// import SignUp from './SignUp';
-import WeatoAdd from './WeatoAdd.js';
-import './index.css';
-function App() {
-  return (
-    <WeatoAdd/>
-    // <Routes>
-    //   <Route path="/" element={<Login />}>
-    //     <Route path="/SignUp" element={<SignUp />} />
-    //   </Route>
-    // </Routes>
->>>>>>> 38f3406af41952e190e458d939aaff6198933d26
+// import React from "react";
+// //import {Routes,Route} from 'react-router-dom';
+// // import Login from './Login';
+// // import SignUp from './SignUp';
+// import WeatoAdd from './WeatoAdd.js';
+// import './index.css';
+// function App() {
+//   return (
+//     <WeatoAdd/>
+//     // <Routes>
+//     //   <Route path="/" element={<Login />}>
+//     //     <Route path="/SignUp" element={<SignUp />} />
+//     //   </Route>
+//     // </Routes>
+
   );
 }
 
