@@ -2,11 +2,11 @@ import React from "react";
 
 const RightBox = () =>{
     return (
-       <rightBox className=''>
+       <div className='rightBox'>
             <div>
                 오른쪽입니다.
             </div>
-       </rightBox>
+        </div>
     );
 };
 export default RightBox;

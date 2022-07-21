@@ -1,21 +1,21 @@
-import React from 'react';
+// import React from 'react';
 
-import Layout from './components/Layout/Layout';
-import {Routes,Route} from 'react-router-dom';
-import Login from './Login';
-import SignUp from './SignUp';
-function App() {
-  return (
-    <>
-      <Layout />
-      <Routes>
-        <Route path="/Login" element={<Login />}/>
-        <Route path="/SignUp" element={<SignUp />} />
-      </Routes>
-    </>
-  );
-}
-export default App;
+// import Layout from './components/Layout/Layout';
+// import {Routes,Route} from 'react-router-dom';
+// import Login from './Login';
+// import SignUp from './SignUp';
+// function App() {
+//   return (
+//     <>
+//       <Layout />
+//       <Routes>
+//         <Route path="/Login" element={<Login />}/>
+//         <Route path="/SignUp" element={<SignUp />} />
+//       </Routes>
+//     </>
+//   );
+// }
+// export default App;
 // 나원님 꺼
 
 
@@ -37,16 +37,16 @@ export default App;
 //   );
 // }
 
-// import React from 'react';
+import React from 'react';
 
-// import HomeLayout from './components/Layout/HomeLayout';
+import WeatoHome from './components/sections/WeatoHome';
 
-// function App() {
-//   return (
-//     <>
-//       <HomeLayout/>
-//     </>
-//   );
-// }
+function App() {
+  return (
+    <>
+      <WeatoHome/>
+    </>
+  );
+}
 
-// export default App;
+export default App;

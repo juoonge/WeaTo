@@ -5,6 +5,7 @@
 @import './css/Login';
 @import './css/signUp';
 @import './css/footer';
+@import './css/LeftBox';
 *{
 
     font-family: 'Noto Sans KR', sans-serif;
