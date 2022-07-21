@@ -1,6 +1,5 @@
-from rest_framework import serializers
-
-from users.models import CustomAccountManager
+from dataclasses import fields
+from rest_framework import serializers,generics,mixins
 from .models import WeatherComment
 
 # 조회용 Serializer
@@ -15,9 +14,8 @@ class WeatherCommentCreateSerializer(serializers.ModelSerializer):
         model = WeatherComment
         fields = ('location','temperature', 'sky', 'humidity', 'wind', 'rain', 'description', 'scene')
 
-# class UserSerializer(serializers.ModelSerializer):
-#     weathercomment=serializers.PrimaryKeyRelatedField(many=True,queryset=WeatherComment.objects.all())
-    
+# 좋아요
+# class LikeSerializer(serializers.ModelSerializer):
 #     class Meta:
-#         model=CustomAccountManager
-#         fields=("id","user_name","weathercomment")
+#         model=LikeMarks
+#         fields='__all__'

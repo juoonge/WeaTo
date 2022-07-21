@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
-from rest_framework import status, permissions
+from rest_framework import status, permissions,generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import RegisterUserSerializer, LoginSerializer, LogoutSerializer
-
+from users.models import NewUser
 
 class CustomUserCreate(APIView):
     serializer_class = RegisterUserSerializer
@@ -40,3 +40,7 @@ class LogoutAPIView(APIView):
         serializer.save()
 
         return Response("Successful Logout", status=status.HTTP_204_NO_CONTENT)
+
+# class UserList(generics.ListAPIView):
+#     queryset=NewUser.objects.all()
+#     serializer_class=UserSerializer
