@@ -17,3 +17,6 @@ pyjwt
 djangorestframework==3.13.1
 djangorestframework-simplejwt==5.0.0
 django-cors-headers
+selenium
+bs4
+Pillow
