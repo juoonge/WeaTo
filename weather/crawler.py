@@ -6,7 +6,7 @@ import datetime
 
 def Crawler(location):
     soups = []
-    driver = webdriver.Chrome('./chromedriver.exe')
+    driver = webdriver.Chrome(executable_path='C:/Users/User/WeaTo/weather/chromedriver.exe')
     time.sleep(1)
     driver.get('https://www.naver.com/') # 네이버로 접속
     time.sleep(0.5)
