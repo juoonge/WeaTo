@@ -8,13 +8,8 @@ main{
     grid-template-columns: 45% 55%; /* 각 행(세로줄)의 길이 */
     grid-template-rows: 100% ;/* 각 열(가로줄)의 길이 */
     gap: 10px; /* 자식요소간의 간격 */
-<<<<<<< HEAD
     /* background: url(../../../public/img/bg_cloud.png); */
     filter: brightness(100.7%);
-=======
-    background: url(../../../public/img/bg_cloud.png);
-    position: relative;   
->>>>>>> 46550c718f1ccd4428512cf5516ecba718acee50
     background-size:cover;
     
 }
