@@ -6,8 +6,9 @@ import {Routes,Route} from 'react-router-dom';
 import Login from './components/sections/Login';
 import SignUp from './components/sections/SignUp';
 import WeatoHome from './components/sections/WeatoHome';
+import CCTV from './components/UI/Map';
+import CommetSubmit from './components/Today/WeatoAdd';
 
-// import RightBox from './components/UI/RightBox';
 function App() {
   return (
     <Fragment>
@@ -15,11 +16,12 @@ function App() {
       <main>
         <Routes>
           <Route exact path="/" element={<Sections />}/>
-          <Route path="/Login" element={<Login />}/>
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/WeatoHome" element={<WeatoHome />} />
-          {/* <Route path="/WeatoHome/RightBox" element={<RightBox />} />
-          <Route path="/WeatoHome/cctv" element={<cctv />} /> */}
+          <Route path="/login" element={<Login />}/>
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/weatohome" element={<WeatoHome />} />
+          <Route path="/cctv" element={<CCTV />} />
+          <Route path="/commet-submit" element={<CommetSubmit />} />
+          <Route path="/WeatoHome/cctv" element={<cctv />} /> 
         </Routes>
       </main>
       <Footer />
