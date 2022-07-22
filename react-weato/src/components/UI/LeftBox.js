@@ -1,5 +1,6 @@
 import React from "react";
-import Leftlayout from './Leftlayout';
+import Leftlayout from './Leftweather/Leftlayout';
+import TempCompare from "./Fourgraph/TempCompare";
 
 const ReftBox = () =>{
 let now= new Date();
@@ -51,8 +52,8 @@ let minutes=now.getMinutes();
             <div className="leftBox-layout">
                 <Leftlayout/>
             </div>
-            <div className="leftBox-layout">
-                표
+            <div className="leftBox-layout" >
+                <TempCompare/>
             </div>
         </div>
     );

@@ -6,7 +6,10 @@
 @import './css/signUp';
 @import './css/footer';
 @import './css/LeftBox';
+<<<<<<< HEAD
+=======
 @import './css/RightBox';
+>>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
 
 *{
 
@@ -43,5 +46,25 @@ body {
     max-width: 700px;
     color: #6f6f6f;
     font-size: 0.9rem;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder { /* WebKit browsers */
+  color:transparent;
+}
+
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:transparent;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:transparent;
+}
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:transparent;
 }
 
