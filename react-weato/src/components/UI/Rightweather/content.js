@@ -1,75 +1,58 @@
-import React from "react";
-import styled, {css} from "styled-components";
-import { useState} from "react";
+import React, { useMemo } from "react";
+import styled from "styled-components";
 
-// const topbtn = [
-//     {
-//         name: 'comment',
-//         text: '날씨 코멘트'
-//     },
-//     {
-//         name: 'region',
-//         text: '날씨별 지역보기'
-//     },
-//     {
-//         name: 'recommendmap',
-//         text: '편의시설 지도'
-//     },
-// ];
-// const Weatherbtn = styled.div` 
-//     font-size: 1.125rem;
-//     cursor: pointer;
-//     white-space: pre;
-//     text-decoration: none;
-//     color:inherit
-//     padding-bottom: 0.25rem;
+import Comment from "./comment";
+import Region from "./region";
+import Recommendmap from "./recommendmap";
 
-//     &:hover{
-//         color: blue;
-//     }
-//     ${props => 
-//         props.active && css`
-//         font-weight: 600;
-//         horder-bottom:2px solid #bule;
-//         color : #blue;
-//         &:hover{
-//         color:aqua;
-//         }
-//     `}
-//     &+&{
-//         margin-left: 1rem;
-//     }
-// `;
-const articles = [
-    {
-        name: 'comment',
-        text: '날씨DFSDFSDFSDF 코멘트'
-    },
-    {
-        name: 'region',
-        text: '날씨별DFSDFSFSD 지역보기'
-    },
-    {
-        name: 'recommendmap',
-        text: '편의시DFSDFSDFSDF설 지도'
-    },
-];
-const Item = styled.div` 
-    font-size: 1.125rem;
-
-    }
+const NewsListBlock = styled.div`
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+    width: 768px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+}
 `;
-const content = ({btn} ) => {
-    // const [articles, setArticles] = useState(null);
+const Content = (btn) => {
+
+    const Contentitem = useMemo(() => {;
+        if (!btn)
+            return null;
+        switch (btn.btn) {
+            case 'comment':
+                return  (
+                    <div>
+                        <Comment/>
+                    </div>
+                )
+            case 'region':
+                return (
+                    <div>
+                        <Region/>
+                    </div>
+                )
+            case 'recommendmap':
+                return (
+                    <div>
+                        <Recommendmap/>
+                    </div>
+                )
+            default: 
+                return null;
+        }
+    },[btn])
 
     return(
         <div className='rightBox-content'>
-            {articles.map(article=>(
-                <Item key={articles.name} article={articles} />
-
-            ))}
+            <NewsListBlock>
+                {Contentitem}
+            </NewsListBlock>
         </div>
     )
 };
 
-export default content;
+export default Content;
