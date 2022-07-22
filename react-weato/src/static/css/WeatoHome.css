@@ -9,9 +9,19 @@ main{
     grid-template-rows: 100% ;/* 각 열(가로줄)의 길이 */
     gap: 10px; /* 자식요소간의 간격 */
     background: url(../../../public/img/bg_cloud.png);
-    filter: brightness(100.7%);
+    position: relative;   
     background-size:cover;
+    
+}
+.Container::before{
+    position: absolute;
+    content:"";
     opacity: 0.6;
+    top:0px;
+    bottom: 0px;
+    left:0px;
+    right:0px;
+    background-color: white;
 }
 .Boxes{
     width:100%;
