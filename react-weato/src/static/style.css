@@ -6,6 +6,8 @@
 @import './css/signUp';
 @import './css/footer';
 @import './css/LeftBox';
+@import './css/RightBox';
+
 *{
 
     font-family: 'Noto Sans KR', sans-serif;

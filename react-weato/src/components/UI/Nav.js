@@ -70,14 +70,10 @@ const Nav = () => {
                   <Link to ="/SignUp" className='nav-link' >회원가입</Link>
                 </li>
               </ul>
-
             </div>
           </div>
         </nav>
-
-
     </div>
-
   );
 };
 
