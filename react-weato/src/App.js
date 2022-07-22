@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
 import React, { Fragment} from 'react';
 import Header from './components/UI/Header';
 import Footer from './components/UI/Footer';
@@ -10,11 +6,8 @@ import {Routes,Route} from 'react-router-dom';
 import Login from './components/sections/Login';
 import SignUp from './components/sections/SignUp';
 import WeatoHome from './components/sections/WeatoHome';
-<<<<<<< HEAD
-=======
 import CCTV from './components/UI/Map';
 import CommetSubmit from './components/Today/WeatoAdd';
->>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
 
 function App() {
   return (
@@ -34,12 +27,7 @@ function App() {
       <Footer />
     </Fragment>
 
-<<<<<<< HEAD
-
- );
-=======
   );
->>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
 }
 
 export default App;

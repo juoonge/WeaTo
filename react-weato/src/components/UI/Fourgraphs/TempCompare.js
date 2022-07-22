@@ -2,21 +2,20 @@ import { ResponsiveLine } from '@nivo/line'
 import tempdata from './Datafile/Tempdata';
 
 const TempCompare= () => {
-    
     const Graphstyles = {
         textAlign: 'center',
         background: '#f0f8ff',   
         borderRadius: ".25rem",
         padding: ".375rem .75rem",
         width:'80%',
-        height:'230px',
+        height:'240px',
         margin:'0 auto'
     };
     return(
     <div style={Graphstyles} > 
         <ResponsiveLine
             data={tempdata}
-            margin={{ top: 20, right: 110, bottom: 50, left: 60 }}
+            margin={{ top: 40, right: 110, bottom: 50, left: 60 }}
             xScale={{ type: 'point' }}
             yScale={{
                 type: 'linear',
