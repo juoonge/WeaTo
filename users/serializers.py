@@ -82,9 +82,3 @@ class LogoutSerializer(serializers.Serializer):
         except TokenError:
             self.fail('bad_token')
 
-# class UserSerializer(serializers.ModelSerializer):
-#     likemarks=serializers.PrimaryKeyRelatedField(many=True,queryset=LikeMarks.objects.all())
-
-#     class Meta:
-#         model=NewUser
-#         fields=("id","user_name","likemarks")

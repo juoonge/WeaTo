@@ -13,6 +13,7 @@ from .serializer import WeatherCommentSerializer, WeatherCommentCreateSerializer
 from django.db.models import Q
 from .permissions import CustomReadOnly
 from users.models import NewUser
+
 def cctv(request):
 
     return render(request,'cctv.html')

@@ -20,7 +20,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'users',
+  
     'weather',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -31,6 +31,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
+    'django_apscheduler',
+    'users.apps.UsersConfig', ##installed_apps에서 users 제거
 
     'corsheaders',
 ]
@@ -44,6 +46,7 @@ REST_FRAMEWORK = {
 
 }
 AUTH_USER_MODEL = "users.NewUser"
+
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=3),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
@@ -75,6 +78,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
 
 
 MIDDLEWARE = [
