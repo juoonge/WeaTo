@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Section from '../../HOC/section';
 import "../../static/style.css";
-import bgImage from '../../image/back.png';
 
 function SignUp() {
   const [name, setName] = useState("")
@@ -28,16 +27,16 @@ function SignUp() {
   const onSubmit = (event) => {
     event.preventDefault();
     if(PW !== confirmPW) {
-      return alert('비밀번호와 비밀번호확인은 같아야 합니다.')
-    }
+      console.log("비밀번호 틀림");
+  }
   }
 
   return (
     <Section id='SignUp'>
-            <div
-          className='SignUp-content p-5'
+            {/* <div
+          className='home-content p-5'
           style={{ backgroundImage: `url(${bgImage})` }}
-      >
+      > */}
       <div className='container '>
         <div className='section-header pt-5 pb-5 text-center'>
           <div className="main">
@@ -53,7 +52,6 @@ function SignUp() {
             </div>  
           </div>
         </div>
-      </div>
       </div>
     </Section>
   );

@@ -22,6 +22,7 @@ const Nav = () => {
       setNavClass(navClass);
     });
   }, []);
+
   return (
 
       <div>
@@ -60,8 +61,8 @@ const Nav = () => {
                 <li className='nav-item'>
                   {/* <Linkk target='Login' to ="/Login" classes='nav-link'>
                     로그인
-                  </Linkk> */}
-                  <Link to ="/Login" className='nav-link' >로그인</Link>
+                  </Linkk> */}     
+                  <Link to ="/Login" className='nav-link' >로그인</Link>      
                 </li>
                 <li className='nav-item'>
                   {/* <Linkk target='SignUp' to ="/SignUp" classes='nav-link'>
