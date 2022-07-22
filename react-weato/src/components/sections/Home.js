@@ -3,7 +3,7 @@ import React from 'react';
 import Section from '../../HOC/section';
 import bgImage from '../../image/back.png';
 import LogoImage from '../../image/logo_WeaTo.png';
-import Link from '../UI/Link';
+import {Link} from 'react-router-dom';
 
 const home = () => {
   return (
@@ -21,7 +21,7 @@ const home = () => {
               우리가 <b>함께 만들어 가는</b> 오늘의 날씨.<br/>
               한 번, 시작해볼까요?
             </h2>
-            <Link target='about' classes='startbtn btn '>
+            <Link to ="/Login" className='startbtn btn' >
               시작하기
             </Link>
 

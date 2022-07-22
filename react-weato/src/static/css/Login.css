@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .main{ /* 배경 설정 */
     text-align:center;
@@ -152,3 +153,28 @@ a{/* link 컬러 */
         padding: 6% 0 0 60px;
     }
 }
+=======
+#Login {
+  height: calc(100vh - 30px);
+  margin-top: 30px;
+
+}
+@media (max-width: 768px) {
+  #Login {
+      margin-top: 115px;
+  }
+}
+#Login > div {
+  height: 100%;
+}
+#Login .Login-content {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+>>>>>>> 1d68588123e93a04150c9d16a1df87624aad7c13
