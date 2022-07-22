@@ -20,9 +20,9 @@ const Weatherbtn = styled.div`
     cursor: pointer;
     white-space: pre;
     text-decoration: none;
-    color:inherit
-    padding-bottom: 0.25rem;
-    width: 250px;
+    color:inherit;
+    padding-bottom  : 0.25rem;
+    width : 250px;
     text-align: center;
     font-size: 1.2rem;
     background-color: #5BB7DE;

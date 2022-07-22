@@ -1,44 +1,42 @@
 import React, { useMemo } from "react";
 import styled from "styled-components";
 
-import Comment from "./comment";
-import Region from "./region";
-import Recommendmap from "./recommendmap";
+import TempCompare from "./TempCompare";
+import RainCompare from "./RainCompare";
+import HumCompare from "./HumCompare";
 
-const NewsListBlock = styled.div`
+const CompareList = styled.div`
     box-sizing: border-box;
-    padding-bottom: 3rem;
-    width: 768px;
     margin: 0 auto;
-    margin-top: 2rem;
+    width:100%;
     @media screen and (max-width: 768px) {
         width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
 }
 `;
-const Content = (btn) => {
+const Fourgraph = (btn) => {
 
-    const Contentitem = useMemo(() => {;
+    const Graphs = useMemo(() => {;
         if (!btn)
             return null;
         switch (btn.btn) {
-            case 'comment':
+            case 'temp':
                 return  (
                     <div>
-                        <Comment/>
+                        <TempCompare/>
                     </div>
                 )
-            case 'region':
+            case 'rainy':
                 return (
                     <div>
-                        <Region/>
+                        <RainCompare/>
                     </div>
                 )
-            case 'recommendmap':
+            case 'humidity':
                 return (
                     <div>
-                        <Recommendmap/>
+                        <HumCompare/>
                     </div>
                 )
             default: 
@@ -47,12 +45,12 @@ const Content = (btn) => {
     },[btn])
 
     return(
-        <div className='rightBox-content'>
-            <NewsListBlock>
-                {Contentitem}
-            </NewsListBlock>
+        <div className='leftbox-list'>
+            <CompareList>
+                {Graphs}
+            </CompareList>
         </div>
     )
 };
 
-export default Content;
+export default Fourgraph;
