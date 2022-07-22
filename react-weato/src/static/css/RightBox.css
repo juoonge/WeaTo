@@ -4,14 +4,13 @@
   grid-template-rows: 50px  650px;/* 각 열(가로줄)의 길이 */
 
 }
-.contentBox{
+.rightBox-content{
   display: grid;
   grid-template-columns: 100%;/* 각 행(세로줄)의 길이 */
   grid-template-rows: 150px  500px;/* 각 열(가로줄)의 길이 */
-}
-.contentBox{
   background-color: #f2f2f2;
   border-radius: 10px;
+  margin-top: 0;
 }
 .rightBox-top{
   width: 80%;
@@ -20,8 +19,9 @@
   flex-wrap: inherit;
   align-items: center;
   justify-content: center;
-  margin-top: 5px;
+  margin-top: 4px;
 }
+
 /* 날씨코멘트 */
 .rightBox-top{
   width: 100%;
@@ -82,6 +82,15 @@
   background: #4e4e4e;
   border-radius: 9px;
   opacity: 1;
-
-
+}
+.comment-cctv{
+  background-color: #FDD020;
+  /* color: white; */
+  padding: 0px 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  float: right;
+}
+.comment-cctvbtn{
+  color:white !important;
 }

@@ -2,6 +2,7 @@
 import React,{useEffect,useState} from 'react';
 
 const {kakao} = window;
+
 const MapTest=()=>{
     const [map,setMap]=useState(null);
     useEffect(()=>{
@@ -24,3 +25,5 @@ const MapTest=()=>{
         </div>
     );
 }
+
+export default MapTest;

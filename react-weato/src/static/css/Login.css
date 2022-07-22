@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 
 .main{ /* 배경 설정 */
     text-align:center;
     justify-content: center;
     display: flex; 
-    background:url(../../../public/img/bg_cloud.png);
+    /* background:url(../../../public/img/bg_cloud.png); */
     background-size: cover;
     padding:7%;
 }
@@ -153,7 +152,6 @@ a{/* link 컬러 */
         padding: 6% 0 0 60px;
     }
 }
-=======
 #Login {
   height: calc(100vh - 30px);
   margin-top: 30px;
@@ -177,4 +175,3 @@ a{/* link 컬러 */
   bottom: 0;
   left: 0;
 }
->>>>>>> 1d68588123e93a04150c9d16a1df87624aad7c13

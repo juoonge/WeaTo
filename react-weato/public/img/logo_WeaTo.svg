@@ -17,7 +17,7 @@
 <g id="Layer_1" class="st0">
 	<text transform="matrix(1 0 0 1 112.6714 45.6378)" class="st1 st2 st3 st4">WeaTo</text>
 	<ellipse class="st5" cx="41.7" cy="33.3" rx="14.8" ry="13.8"/>
-	<ellipse class="st5" cx="79.5" cy="30" rx="20.3" ry="17.6"/>
+	<ellipse ="st5" cx="79.5" cy="30" rx="20.3" ry="17.6"/>
 	<ellipse class="st5" cx="62.8" cy="18.9" rx="21.1" ry="18.9"/>
 	<path class="st5" d="M40.8,31.3C40.8,31.1,0,47.6,0,47.6h79.6l0.7-21.9L40.8,31.3z"/>
 	<g class="st6">
