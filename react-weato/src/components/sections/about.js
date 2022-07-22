@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../../HOC/section';
-import IconWeather from '../../image/logo_WeaTo.png';
+import IconWeather from '../../image/img_about_kakaotalk.png';
 
 const about = () => {
   return (
