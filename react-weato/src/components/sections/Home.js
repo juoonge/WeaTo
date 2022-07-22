@@ -2,7 +2,7 @@ import React from 'react';
 
 import Section from '../../HOC/section';
 import bgImage from '../../image/back.png';
-import LogoImage from '../../image/logo_WeaTo.png';
+import LogoImage from '../../image/logo_WeaTo_white.png';
 import {Link} from 'react-router-dom';
 
 const home = () => {
