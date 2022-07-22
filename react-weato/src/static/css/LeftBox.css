@@ -141,6 +141,42 @@
     font-size: 10px;
     padding-top: 4%;
 }
+/*
+.compare-button{
+    display: flex;
+    gap:3%;
+    margin-left: 10%;
+    position: absolute;
+    width:80%;
+    
+}
+.compare-button>button{
+    border-radius: 10px;
+    width:auto;
+    border:none;
+    background-color: #f0f8ff;
+}
+.compare-button>button:hover{
+    background-color:#5BB7DE;
+    color:white;
+}
+*/
+.leftBox-top{
+    width: 80%;
+    display:flex;
+    position:absolute;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2%;
+}
+.leftBox-btn{
+    width: 100%;
+}
+.leftbox-list{
+    width: 100%;
+    height:200px;
+}
 
 
 

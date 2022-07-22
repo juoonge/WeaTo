@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
 .main{ /* 배경 설정 */
     text-align:center;
     justify-content: center;
     display: flex; 
-<<<<<<< HEAD
-=======
     /* background:url(../../../public/img/bg_cloud.png); */
->>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
     background-size: cover;
     padding:7%;
 }
@@ -157,10 +150,6 @@ a{/* link 컬러 */
         padding: 0 0 0 30px;
     }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
 #Login {
   height: calc(100vh - 30px);
   margin-top: 30px;
@@ -184,7 +173,3 @@ a{/* link 컬러 */
   bottom: 0;
   left: 0;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
