@@ -1,70 +1,67 @@
+@import "./css/header";
+@import "./css/home";
+@import "./css/about";
+@import "./css/Login";
+@import "./css/signUp";
+@import "./css/footer";
+@import "./css/LeftBox";
+@import "./css/RightBox";
 
-@import './css/header';
-@import './css/home';
-@import './css/about';
-@import './css/Login';
-@import './css/signUp';
-@import './css/footer';
-@import './css/LeftBox';
-<<<<<<< HEAD
-=======
-@import './css/RightBox';
->>>>>>> 657c57879ba959840b7862987b35d0f5ca975dc3
-
-*{
-
-    font-family: 'Noto Sans KR', sans-serif;
+* {
+  font-family: "Noto Sans KR", sans-serif;
 }
 body {
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 .section-header .section-title {
-    font-weight: bold;
-    color: #4e4e4e;
-    font-family: 'Raleway', sans-serif;
-    position: relative;
-    margin-bottom: 2rem;
+  font-weight: bold;
+  color: #4e4e4e;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  margin-bottom: 2rem;
 }
 .section-header .section-title span {
-    color: #248eff;
+  color: #248eff;
 }
 .section-header .section-title:after {
-    content: '';
-    content: '';
-    display: block;
-    height: 3px;
-    width: 70px;
-    background: #248eff;
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    transform: translateX(-50%);
+  content: "";
+  content: "";
+  display: block;
+  height: 3px;
+  width: 70px;
+  background: #248eff;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .section-header .section-subtitle {
-    max-width: 700px;
-    color: #6f6f6f;
-    font-size: 0.9rem;
+  max-width: 700px;
+  color: #6f6f6f;
+  font-size: 0.9rem;
 }
 
 input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder { /* WebKit browsers */
-  color:transparent;
+textarea:focus::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
 }
 
 input:focus:-moz-placeholder,
-textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color:transparent;
+textarea:focus:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
 }
 
 input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color:transparent;
+textarea:focus::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
 }
 
 input:focus:-ms-input-placeholder,
-textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */
-  color:transparent;
+textarea:focus:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
 }
-
