@@ -6,7 +6,7 @@ import datetime
 
 def Crawler(location):
     soups = []
-    driver = webdriver.Chrome('./chromedriver.exe')
+    driver = webdriver.Chrome(executable_path='C:/Users/User/WeaTo/weather/chromedriver.exe')
     time.sleep(1)
     driver.get('https://www.naver.com/') # 네이버로 접속
     time.sleep(0.5)
@@ -48,7 +48,7 @@ def Temperature(soups):
     for i in range(4):
         temp = []
         for j in soups[i].select('div.point_box>span.num')[0:7]:# 7시간 동안의 기온 추출
-            temp.append(j.text[-3:-1])
+            temp.append(int(j.text[-3:-1]))
         if i == 0:
             temperatures['weather'] = temp
         elif i == 1:
@@ -65,9 +65,9 @@ def Rainprobability(soups):
         temp = []
         for j in soups[i].select('div.icon_wrap>ul>li>em.value')[0:7]:
             if j.text == '-':
-                temp.append('0%')
+                temp.append(0)
             else:
-                temp.append(j.text)
+                temp.append(int(j.text[:-1]))
         if i == 0:
             rainprobabilities['weather'] = temp
         elif i == 1:
@@ -84,25 +84,20 @@ def Humidity(soups):
     humidities = {}
     for i in range(4):
         temp = []
-        if (i == 0) or (i == 1):
-            for j in soups[i].select('span.num')[-56:-49]:
-                temp.append(j.text)
-            if i == 0:
-                humidities['weather'] = temp
-            else:
-                humidities['aqweather'] = temp
+        for j in soups[i].select('div.humidity_graph_box>div>div>div>div>ul>li>div>span>span')[0:7]:
+            temp.append(int(j.text))
+        if i == 0:
+            humidities['weather'] = temp
+        elif i == 1:
+            humidities['aqweather'] = temp
         elif i == 2:
-            for j in soups[i].select('span.num')[-72:-65]:
-                temp.append(j.text)
             humidities['weatherchannel'] = temp
         elif i == 3:
-            for j in soups[i].select('span.num')[-48:-41]:
-                temp.append(j.text)
             humidities['weathernews'] = temp
     return humidities
 
 
-def now(location, service, soups):
+def now(location, soups):
     state = {}
     now = datetime.datetime.now()
     weekdays = ['월', '화', '수', '목', '금', '토', '일']
@@ -116,15 +111,8 @@ def now(location, service, soups):
     t = Temperature(soups)
     r = Rainprobability(soups)
     h = Humidity(soups)
-    state['temperature'] = t[service][0]
-    state['rain_prob'] = r[service][0]
-    state['humidity'] = h[service][0]
-    if service == 'weather':
-        state['wind'] = soups[0].select('dd.desc')[2].text
-    elif service == 'aqweather':
-        state['wind'] = soups[1].select('dd.desc')[2].text
-    elif service == 'weatherchannel':
-        state['wind'] = soups[2].select('dd')[2].text
-    elif service == 'weathernews':
-        state['wind'] = soups[3].select('dd')[2].text
+    state['temperature'] = round((int(t['weather'][0]) + t['aqweather'][0] + t['weatherchannel'][0] + t['weathernews'][0])/4, 1)
+    state['rain_prob'] = round((r['weather'][0] + r['aqweather'][0] + r['weatherchannel'][0] + r['weathernews'][0])/4, 1)
+    state['humidity'] = round((h['weather'][0] + h['aqweather'][0] + h['weatherchannel'][0] + h['weathernews'][0])/4, 1)
+    state['wind'] = round((float(soups[0].select('dd.desc')[2].text[:-3]) + float(soups[1].select('dd.desc')[2].text[:-3]) + float(soups[2].select('dd')[2].text[:-3]) + float(soups[3].select('dd')[2].text[:-3]))/4,1)
     return state

@@ -13,3 +13,9 @@ class WeatherCommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = WeatherComment
         fields = ('location','temperature', 'sky', 'humidity', 'wind', 'rain', 'description', 'scene')
+    
+# 좋아요
+# class LikeSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model=LikeMarks
+#         fields='__all__'
