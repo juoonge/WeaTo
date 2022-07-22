@@ -7,8 +7,9 @@
 @import "./css/LeftBox";
 @import "./css/RightBox";
 
-* {
-  font-family: "Noto Sans KR", sans-serif;
+*{
+
+    font-family: 'Noto Sans KR', sans-serif;
 }
 body {
   height: 100vh;

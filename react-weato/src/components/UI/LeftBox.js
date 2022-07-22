@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState, useCallback } from "react";
 import Leftlayout from './Leftweather/Leftlayout';
-import TempCompare from "./Fourgraph/TempCompare";
+import Buttons from './Fourgraphs/Buttons';
+import Fourgraph from './Fourgraphs/Fourgraph';
 
 const ReftBox = () =>{
 let now= new Date();
@@ -11,6 +13,13 @@ const week=['일','월','화','수','목','금','토'];
 let datOfWeek=week[now.getDay()];
 let hours=now.getHours();
 let minutes=now.getMinutes();
+
+const onSelect = useCallback(btn => setBtn(btn),[]);
+    const [btn, setBtn] = useState('comment');
+
+    useEffect(() => {
+        console.log(btn);
+    },[btn])
 
     return (
         <div className='leftBox'>
@@ -53,7 +62,10 @@ let minutes=now.getMinutes();
                 <Leftlayout/>
             </div>
             <div className="leftBox-layout" >
-                <TempCompare/>
+                <div className="leftBox-top">
+                    <Buttons btn={btn} onSelect={onSelect}/>
+                </div>
+                <Fourgraph btn={btn}/>
             </div>
         </div>
     );
