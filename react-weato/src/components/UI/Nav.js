@@ -22,6 +22,7 @@ const Nav = () => {
       setNavClass(navClass);
     });
   }, []);
+
   return (
 
       <div>
@@ -60,27 +61,20 @@ const Nav = () => {
                 <li className='nav-item'>
                   {/* <Linkk target='Login' to ="/Login" classes='nav-link'>
                     로그인
-                  </Linkk> */}
-                  <Link to ="/Login" className='nav-link' >로그인</Link>
+                  </Linkk> */}     
+                  <Link to ="/login" className='nav-link' >로그인</Link>      
                 </li>
                 <li className='nav-item'>
                   {/* <Linkk target='SignUp' to ="/SignUp" classes='nav-link'>
                     회원가입
                   </Linkk> */}
-                  <Link to ="/SignUp" className='nav-link' >회원가입</Link>
+                  <Link to ="/signup" className='nav-link' >회원가입</Link>
                 </li>
               </ul>
-              {/* <routes>
-                <Route exact path="/Login" element={Login} />
-                <Route path="/SignUp" element={SignUp} />  
-              </routes> */}
             </div>
           </div>
         </nav>
-
-
     </div>
-
   );
 };
 

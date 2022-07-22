@@ -20,7 +20,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'users',
+  
     'weather',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -31,6 +31,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
+    'django_apscheduler',
+    'users.apps.UsersConfig', ##installed_apps에서 users 제거
 
     'corsheaders',
 ]
@@ -44,9 +46,10 @@ REST_FRAMEWORK = {
 
 }
 AUTH_USER_MODEL = "users.NewUser"
+
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=3),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': False,
     'UPDATE_LAST_LOGIN': False,
@@ -77,6 +80,7 @@ SIMPLE_JWT = {
 }
 
 
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',     
     'django.middleware.common.CommonMiddleware', 
@@ -89,7 +93,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:3000', 'http://localhost:3000')
+CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:8000', 'http://localhost:3000')
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'config.urls'

@@ -1,0 +1,261 @@
+
+.main{ /* 배경 설정 */
+    text-align:center;
+    justify-content: center;
+    display: flex; 
+    /* background:url(../../../public/img/bg_cloud.png); */
+    background-size: cover;
+    padding:7%;
+}
+ .sub-main{/* 박스 설정 */
+    justify-content: center;
+    height:530px;
+    width: 450px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+
+    padding:8%;
+    border-radius: 10px;
+    background-color: white;
+} 
+.Login-title{/* 로그인 제목 */
+    text-align:center;
+    margin-bottom: 10%;
+    font-size: 50px;
+    color:#4A4A4A;
+}
+
+.login-input{/* 로그인 입력창 */
+    padding-left: 15%;
+    margin:5%;
+    width:280px;
+    height:50px;
+    border-radius: 60px;
+    box-shadow: insert 0px 0px 25px 0px ;
+    outline-color: #5BB7DE;
+    border:2px solid #D9D9D9;
+    font-size: 10px;
+} 
+.Login-layout{
+    display: grid;
+    grid-template-columns: 100%;/* 각 행(세로줄)의 길이 */
+    grid-template-rows: 40% 40%;/* 각 열(가로줄)의 길이 */
+    gap: 10px; /* 자식요소간의 간격 */
+}
+
+.ID-icon{/* ID 아이콘 */
+    height: 50px;
+    width:10px;
+    position: absolute;
+    margin-left: 3%;
+    margin-top:1.2%;
+    color:#D9D9D9;
+
+}
+
+.ID-icon,.PW-icon{/* ID 아이콘 */
+    height: 85px;
+    width: 10px;
+    position: absolute;
+    margin-top:7.5%;
+    margin-left: 3%;
+    color:#D9D9D9;
+
+}
+
+.login-button-style {
+  /* 로그인 버튼 위치 */
+  padding-top: 20px;
+}
+.login-button {
+  /* 로그인 버튼 설정 */
+  width: 100px;
+  height: 40px;
+  margin-top: 10%;
+  border-radius: 60px;
+  background-color: #5bb7de;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+/* .login-button:hover{ 로그인 버튼에 마우스 올릴 시
+    background-color:black;
+    color:white;
+    box-shadow: 5px 5px 0 rgb(0,0,0,0.5);
+} */
+
+.link {
+  /* link 설정 */
+  margin-right: 10%;
+  margin-top: 10%;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+a {
+  /* link 컬러 */
+  color: #5bb7de;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 5%;
+  }
+  .sub-main {
+    padding: 10%;
+  }
+  .Login-title {
+    padding-top: 10%;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .login-layout {
+    margin-left: 3%;
+  }
+  .login-button {
+    height: 40px;
+    width: 80px;
+    font-size: 15px;
+  }
+  .login-input {
+    height: 50px;
+    width: 250px;
+    padding-left: 15%;
+  }
+  .login-button {
+    height: 40px;
+    width: 80px;
+    font-size: 15px;
+  }
+  .ID-icon {
+    /* ID 아이콘 */
+    padding: 0 0 0 30px;
+  }
+  .PW-icon {
+    /* ID 아이콘 */
+    padding: 0 0 0 30px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    padding: 5%;
+  }
+  .sub-main {
+    padding: 10%;
+  }
+  .Login-title {
+    padding-top: 10%;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .login-layout {
+    margin-left: 10%;
+  }
+  .login-button {
+    height: 40px;
+    width: 80px;
+    font-size: 15px;
+  }
+  .ID-icon {
+    /* ID 아이콘 */
+    padding: 0 0 0 30px;
+  }
+  .PW-icon {
+    /* ID 아이콘 */
+    padding: 0 0 0 30px;
+  }
+}
+
+a{/* link 컬러 */
+    color:#5BB7DE;
+}
+
+
+@media (max-width:1024px){
+    .main{
+        padding:5%;
+    }
+    .sub-main{
+       padding:10%;
+    }
+    .Login-title{
+        padding-top: 10%;
+        font-size:30px;
+        margin-bottom:30px;
+    }
+    .login-layout{
+        margin-left: 3%;
+    }
+    .login-button{
+        height: 40px;
+        width:80px;
+        font-size:15px;
+        
+    }
+    .login-input{
+        height:50px;
+        width:250px;
+        padding-left: 15%;
+    }
+    .login-button{
+        height: 40px;
+        width:80px;
+        font-size:15px;
+    }
+    .ID-icon{/* ID 아이콘 */
+        padding: 0 0 0 30px;
+    }
+    .PW-icon{/* ID 아이콘 */
+        padding: 0 0 0 30px;
+
+    }
+}
+@media (max-width: 768px){
+    .main{
+        padding:5%;
+    }
+    .sub-main{
+       padding:10%;
+    }
+    .Login-title{
+        padding-top: 10%;
+        font-size:30px;
+        margin-bottom:30px;
+    }
+    .login-layout{
+        margin-left: 10%;
+    }
+    .login-button{
+        height: 40px;
+        width:80px;
+        font-size:15px;
+    }
+    .ID-icon{/* ID 아이콘 */
+        padding: 0 0 0 30px;
+    }
+    .PW-icon{/* ID 아이콘 */
+        padding: 0 0 0 30px;
+    }
+}
+#Login {
+  height: calc(100vh - 30px);
+  margin-top: 30px;
+  background: url(../../../public/img/bg_cloud.png);
+}
+@media (max-width: 768px) {
+  #Login {
+    margin-top: 115px;
+  }
+}
+#Login > div {
+  height: 100%;
+}
+#Login .Login-content {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

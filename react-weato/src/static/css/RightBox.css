@@ -1,0 +1,176 @@
+.rightBox {
+  display: grid;
+  grid-template-columns: 100%; /* 각 행(세로줄)의 길이 */
+  grid-template-rows: 50px 650px; /* 각 열(가로줄)의 길이 */
+}
+.rightBox-content {
+  display: grid;
+  grid-template-columns: 100%; /* 각 행(세로줄)의 길이 */
+  grid-template-rows: 150px 500px; /* 각 열(가로줄)의 길이 */
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-top: 2px;
+}
+.contentBox > hr {
+  margin: 10px;
+}
+.rightBox-top {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+/* 날씨코멘트 */
+.rightBox-top {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid black; */
+}
+.comment-post {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid black; */
+}
+.comments {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid black; */
+}
+.rightBox-btn {
+  width: 100%;
+  color: white;
+}
+.comment-go {
+  display: grid;
+  grid-template-rows: 100%; /* 각 행(세로줄)의 길이 */
+  grid-template-columns: 15% 85%;
+  padding: 10px 35px;
+}
+.comment-time {
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 15px;
+}
+.comment-gobox {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.comment-gobox-inner {
+  margin: 15px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+}
+.comment-gobox-inner > h6 {
+  margin-bottom: 15px;
+}
+.comment-gobox-btn {
+  background-color: #5bb7de;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  text-decoration: none;
+}
+.contentBox > span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4e4e4e;
+  border-radius: 9px;
+  opacity: 1;
+}
+.comment-cctv {
+  background-color: #fdd020;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  float: right;
+  width: 195px;
+  margin-left: 72%;
+}
+.comment-cctvbtn {
+  color: white !important;
+}
+.comment-list {
+  padding: 10px 35px;
+  width: 100%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 100%; /* 각 행(세로줄)의 길이 */
+  grid-template-rows: 10% 90%;
+}
+.comment-user {
+  display: grid;
+  grid-template-rows: 100%; /* 각 행(세로줄)의 길이 */
+  grid-template-columns: 5% 95%;
+}
+.comment-listbox {
+  display: grid;
+  grid-template-rows: 100%; /* 각 행(세로줄)의 길이 */
+  grid-template-columns: 15% 85%;
+  margin-top: 10px;
+}
+.comment-usertime {
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 15px;
+}
+.comment-userweather {
+  font-weight: bold;
+}
+.comment-userbox {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 2% 98%;
+}
+.comment-userbox-color {
+  background-color: blue;
+  border-radius: 10px 0 0px 10px;
+}
+.comment-userbox-in {
+  margin: 15px;
+}
+.comment-userbox-inner {
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+}
+
+.comment-userbox-image {
+  width: 120px;
+  height: 120px;
+  background-color: burlywood;
+  border-radius: 60px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+.comment-userbox-icon {
+  width: 60px;
+  height: 60px;
+  background-color: burlywood;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  margin: 13px;
+  margin-top: 40px;
+}
+.comment-userbox-circle {
+  display: flex;
+  flex-direction: row;
+}
+.comment-userbox-iconbox{
+  text-align: center;
+}

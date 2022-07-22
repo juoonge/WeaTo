@@ -52,6 +52,8 @@ class NewUser(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(default=timezone.now)
 
+    create_comment = models.BooleanField(default=False)
+
     objects = CustomAccountManager()
 
     USERNAME_FIELD = 'email'

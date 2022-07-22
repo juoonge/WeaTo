@@ -1,5 +1,5 @@
 from django.db import models
-#from users.models import NewUser
+from users.models import NewUser
 
 class WeatherComment(models.Model):
     location = models.CharField(max_length=30)
@@ -11,6 +11,8 @@ class WeatherComment(models.Model):
     description = models.TextField()  # 날씨 묘사용 field.
     scene = models.ImageField(blank=True, upload_to='scene/', default='default.png',)  # 사진 저장용 경로 설정.
     date = models.DateTimeField(auto_now_add=True)  # 작성할때 자동으로 시간 저장.
+
+    author = models.ForeignKey(NewUser, on_delete=models.CASCADE, related_name='weather')
 
     def __str__(self):
         return self.location + '\t' + str(self.date)
