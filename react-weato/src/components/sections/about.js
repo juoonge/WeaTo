@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../../HOC/section';
 import ImgTalk from '../../image/img_about_kakaotalk.png';
-import IconComment from '../../image/icon_about_comment.png';
+import IconComment from '../../image/icon_about_commend.png';
 import IconSearch from '../../image/icon_about_region_search.png';
 import IconRecommend from '../../image/icon_about_recommend.png';
 import IconCCTV from '../../image/icon_about_cctv.png';
@@ -17,7 +17,8 @@ const about = () => {
             <span>WeaTO? </span>
           </h3> */}
           {/* <h6 className='section-subtitle mr-auto ml-auto'> */}
-          <img src={ImgTalk} />
+          <h1>둘 다 모르는 질문은 이제 그만 멈춰!</h1>
+          <img className='img-talk' src={ImgTalk} />
           {/* </h6> */}
         </div>
         <div className='about-container'>
