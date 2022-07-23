@@ -1,145 +1,178 @@
-.leftBox{
-    position: relative;
-    display: grid;
-    grid-template-columns: 100%;/* 각 행(세로줄)의 길이 */
-    grid-template-rows: 50px 220px 130px 250px;/* 각 열(가로줄)의 길이 */
-    gap: 10px; /* 자식요소간의 간격 */
-    color: #4A4A4A;
+.leftBox {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%; /* 각 행(세로줄)의 길이 */
+  grid-template-rows: 50px 220px 130px 250px; /* 각 열(가로줄)의 길이 */
+  gap: 10px; /* 자식요소간의 간격 */
+  color: #4a4a4a;
 }
-.leftBox-layout{
-    width: 100%;
-    height:100%;
+.leftBox-layout {
+  width: 100%;
+  height: 100%;
 }
-.locate-icon{
-    height:24px;
-    width:18px;
-    position: absolute;
-    margin-left: 12%;
-    margin-top:2%
+.locate-icon {
+  height: 24px;
+  width: 18px;
+  position: absolute;
+  margin-left: 12%;
+  margin-top: 2%;
 }
-.search-button{
-    margin-top: 1.5%;
-    height:33px;
-    width: 33px;
-    background: url( "../../../public/img/icon_search_submit.png" );
-    background-size: cover;
-    border:none;
-    cursor: pointer;
-    position: absolute;
-    margin-left: 1%;
-    border-radius: 4px;
-    background-color: aliceblue;
+.search-button {
+  margin-top: 1.5%;
+  height: 33px;
+  width: 33px;
+  background: url("../../../public/img/icon_search_submit.png");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 1%;
+  border-radius: 4px;
+  background-color: aliceblue;
 }
-.search-button:hover{
-    border:2px solid #99d8f3;
-    box-shadow: 2px 2px 0 rgba(147, 210, 241, 0.5);
+.search-button:hover {
+  border: 2px solid #99d8f3;
+  box-shadow: 2px 2px 0 rgba(147, 210, 241, 0.5);
 }
-.leftBox-layout>input{
-    margin-left: 10%;
-    margin-top: 1%;
-    height: 80%;
-    width:70%;
-    padding-left: 7%;
-    font-size: 10px;
-    border-radius: 10px;
-    border:none;
-    outline-color: #5BB7DE;
+.leftBox-layout > input {
+  margin-left: 10%;
+  margin-top: 1%;
+  height: 80%;
+  width: 70%;
+  padding-left: 7%;
+  font-size: 10px;
+  border-radius: 10px;
+  border: none;
+  outline-color: #5bb7de;
 }
-.weather-content{
-    display: grid;
-    grid-template-columns: 50% 50%;/* 각 행(세로줄)의 길이 */
-    grid-template-rows: 220px;/* 각 열(가로줄)의 길이 */
-    gap: 10px; /* 자식요소간의 간격 */
+.weather-content {
+  display: grid;
+  grid-template-columns: 50% 50%; /* 각 행(세로줄)의 길이 */
+  grid-template-rows: 220px; /* 각 열(가로줄)의 길이 */
+  gap: 10px; /* 자식요소간의 간격 */
+  margin-top: 18px;
 }
-.weather-info{
-    height: 100%;
-    width:100%;
-    padding:3%;
+.weather-info {
+  height: 100%;
+  width: 100%;
+  padding: 3%;
 }
-.weather-info .today{
-    margin-top:2%;
-    font-weight: 500;
-    font-size: 12px;
+.weather-info > img {
+  width: 200px;
+  margin: 0 80px 30px;
 }
-.weather-info .area{
-    margin-top: 1%;
-    font-weight:600;
-    font-size:18px;
+.weather-info .today {
+  margin-top: 2%;
+  font-weight: 500;
+  font-size: 12px;
 }
-.weather-info .avg-temp{
-    font-size :45px;
-    font-weight:550;
+.weather-info .area {
+  margin-top: 1%;
+  font-weight: 600;
+  font-size: 18px;
 }
-.weather-info .avg-rainy,.avg-windy, .avg-hum{
-    display: flex;
-    margin-left: 1%;
-    gap:10%;
-    font-weight:800;
-    font-size: 14px;
-    margin-top:1%;
+.weather-info .avg-temp {
+  font-size: 45px;
+  font-weight: 550;
 }
-.rainy-icon,.windy-icon,.hum-icon{
-    width:55px;
-    height:23px;
-    font-size:15px;
-    background-color: white;
-    padding-left: 4%;
-    border-radius: 40px;
+.weather-info .avg-rainy,
+.avg-windy,
+.avg-hum {
+  display: flex;
+  margin-left: 1%;
+  gap: 10%;
+  font-weight: 800;
+  font-size: 14px;
+  margin-top: 1%;
 }
-
-.four-weather{
-    display: grid;
-    grid-template-columns: 46.5% 46.5%;
-    grid-template-rows: 60px 60px;
-    margin-left: 7%;
-    gap: 8px;
-}
-.four-weather-layout{
-    width:100%;
-    height:100%;
-}
-.TMA{
-    background-color: #c35353;
-}
-.Acu{
-    background-color: #DE59A9;
-}
-.channel{
-    background-color: #8572CE;
-}
-.news{
-    background-color: #74B472;
+.rainy-icon,
+.windy-icon,
+.hum-icon {
+  width: 55px;
+  height: 23px;
+  font-size: 15px;
+  background-color: white;
+  padding-left: 4%;
+  border-radius: 40px;
 }
 
-.TMA,.Acu,.channel,.news {
-    display: grid;
-    grid-template-columns: 65% 30%;
-    grid-template-rows: 60px;
-    gap: 8px;
-    padding-left: 5%;
-    color:white;
-    border-radius: 15px;
+.four-weather {
+  display: grid;
+  grid-template-columns: 46.5% 46.5%;
+  grid-template-rows: 60px 60px;
+  margin-left: 7%;
+  gap: 8px;
+  margin-top: 46px;
 }
-.TMA-layout,.Acu-layout,.channel-layout,.news-layout{
-    width:100%;
-    height:100%;
+.four-weather-layout {
+  width: 100%;
+  height: 100%;
 }
-.TMA-name,.Acu-name,.channel-name,.news-name{
-    padding-top: 2%;
-    font-size:12px;
-    height:10px;
+.TMA {
+  background-color: #c35353;
 }
-.TMA-temp,.Acu-temp,.channel-temp,.news-temp{
-    font-size:25px;
-    font-weight: 500;
+.Acu {
+  background-color: #de59a9;
 }
-.TMA-avg-rainy,.TMA-avg-windy,.TMA-avg-hum,.Acu-avg-rainy,.Acu-avg-windy,.Acu-avg-hum,.channel-avg-rainy,.channel-avg-windy,.channel-avg-hum,.news-avg-rainy,.news-avg-windy,.news-avg-hum{
-    display: flex;
-    margin-left: 1%;
-    gap:8%;
-    font-weight:800;
-    font-size: 10px;
-    padding-top: 4%;
+.channel {
+  background-color: #8572ce;
+}
+.news {
+  background-color: #74b472;
+}
+
+.TMA,
+.Acu,
+.channel,
+.news {
+  display: grid;
+  grid-template-columns: 65% 30%;
+  grid-template-rows: 60px;
+  gap: 8px;
+  padding-left: 5%;
+  color: white;
+  border-radius: 15px;
+}
+.TMA-layout,
+.Acu-layout,
+.channel-layout,
+.news-layout {
+  width: 100%;
+  height: 100%;
+}
+.TMA-name,
+.Acu-name,
+.channel-name,
+.news-name {
+  padding-top: 2%;
+  font-size: 12px;
+  height: 10px;
+}
+.TMA-temp,
+.Acu-temp,
+.channel-temp,
+.news-temp {
+  font-size: 25px;
+  font-weight: 500;
+}
+.TMA-avg-rainy,
+.TMA-avg-windy,
+.TMA-avg-hum,
+.Acu-avg-rainy,
+.Acu-avg-windy,
+.Acu-avg-hum,
+.channel-avg-rainy,
+.channel-avg-windy,
+.channel-avg-hum,
+.news-avg-rainy,
+.news-avg-windy,
+.news-avg-hum {
+  display: flex;
+  margin-left: 1%;
+  gap: 8%;
+  font-weight: 800;
+  font-size: 10px;
+  padding-top: 4%;
 }
 /*
 .compare-button{
@@ -161,22 +194,20 @@
     color:white;
 }
 */
-.leftBox-top{
-    width: 80%;
-    display:flex;
-    position:absolute;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1.2%;
+.leftBox-top {
+  width: 80%;
+  display: flex;
+  position: absolute;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: center;
+  margin-top: 51px;
 }
-.leftBox-btn{
-    width: 100%;
+.leftBox-btn {
+  width: 100%;
 }
-.leftbox-list{
-    width: 100%;
-    height:200px;
+.leftbox-list {
+  width: 100%;
+  height: 200px;
+  margin-top: 57px;
 }
-
-
-

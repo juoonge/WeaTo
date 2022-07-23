@@ -4,6 +4,7 @@ import Section from "../../HOC/section";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import bgImage from "../../image/back.png";
 
 function Login() {
   const [ID, setID] = useState("");
@@ -23,10 +24,10 @@ function Login() {
 
   return (
     <Section id='Login'>
-      {/* <div
-          className='home-content p-5'
+      <div
+          className='Login-content p-5'
           style={{ backgroundImage: `url(${bgImage})` }}
-      >  */}
+      > 
       <div className='container'>
         <div className='section-header pt-5 pb-5 text-center'>
           <div className="main">
@@ -50,7 +51,7 @@ function Login() {
           </div>
         </div>
       </div>
-      {/* </div> */}
+      </div>
     </Section>
   );
 }

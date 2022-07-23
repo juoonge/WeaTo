@@ -6,10 +6,10 @@ const RainCompare= () => {
     const Graphstyles = {
         textAlign: 'center',
         background: '#f0f8ff',   
-        borderRadius: ".25rem",
+        borderRadius: "1rem",
         padding: ".375rem .75rem",
-        width:'80%',
-        height:'240px',
+        width:'89%',
+        height:'300px',
         margin:'0 auto'
     };
     return(
