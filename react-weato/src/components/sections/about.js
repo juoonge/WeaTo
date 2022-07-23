@@ -1,6 +1,12 @@
 import React from 'react';
 import Section from '../../HOC/section';
-import IconWeather from '../../image/logo_WeaTo.png';
+import ImgTalk from '../../image/img_about_kakaotalk.png';
+import IconComment from '../../image/icon_about_commend.png';
+import IconSearch from '../../image/icon_about_region_search.png';
+import IconRecommend from '../../image/icon_about_recommend.png';
+import IconCCTV from '../../image/icon_about_cctv.png';
+import IconCrown from '../../image/icon_about_crown.png';
+import IconWeather from '../../image/icon_about_weather.png';
 
 const about = () => {
   return (
@@ -11,9 +17,8 @@ const about = () => {
             <span>WeaTO? </span>
           </h3> */}
           {/* <h6 className='section-subtitle mr-auto ml-auto'> */}
-          <div className='about-situation'>
-            여따 이미지 넣을겁니다앙~
-          </div>
+          <h1>둘 다 모르는 질문은 이제 그만 멈춰!</h1>
+          <img className='img-talk' src={ImgTalk} />
           {/* </h6> */}
         </div>
         <div className='about-container'>
@@ -28,7 +33,7 @@ const about = () => {
           <div className='container'>
             <div className="line1">
               <div className='item'>
-                <img src={IconWeather} />
+                <img src={IconComment} />
                 <h2>날씨 등록</h2>
                 <p className='function-explain'>
                   날씨 등록 시 코멘트 확인 가능!<br/>
@@ -36,7 +41,7 @@ const about = () => {
                 </p>
               </div>
               <div className='item'>
-                <img src={IconWeather} />
+                <img src={IconSearch} />
                 <h2>지역 검색</h2>
                 <p className='function-explain'>
                   지역만 검색하면<br/>
@@ -44,7 +49,7 @@ const about = () => {
                 </p>
               </div>
               <div className='item'>
-                <img src={IconWeather} />
+                <img src={IconRecommend} />
                 <h2>편의시설 추천</h2>
                 <p className='function-explain'>
                   날씨에 맞는 편의시설 추천까지!<br/>
@@ -53,7 +58,7 @@ const about = () => {
             </div>
             <div className="line2">
               <div className='item'>
-                <img src={IconWeather} />
+                <img src={IconCCTV} />
                 <h2>CCTV</h2>
                 <p className='function-explain'>
                   등록된 코멘트가 없다면?<br/>
@@ -61,7 +66,7 @@ const about = () => {
                 </p>
               </div>
               <div className='item'>
-                <img src={IconWeather} />
+                <img src={IconCrown} />
                 <h2>명예의 전당</h2>
                 <p className='function-explain'>
                   좋아요를 받아<br/>
