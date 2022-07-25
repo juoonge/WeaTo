@@ -58,29 +58,32 @@ const footer = () => {
             </div>
             <div className="footer-content">
               <p>
-                <small className="text-muted">살</small>
+                <small className="text-muted">서비스 준비중</small>
               </p>
               <p>
-                <small className="text-muted">려</small>
+                <small className="text-muted"></small>
               </p>
               <p>
-                <small className="text-muted">줘</small>
+                <small className="text-muted"></small>
               </p>
             </div>
           </div>
           <div className="col-sm-6 col-md-6 col-lg-3 mb-5">
             <div className="footer-title">
-              <h6>Contact Us</h6>
+              <h6>My Weather Diary</h6>
             </div>
             <div className="footer-content">
               <p className="text-muted">
-                <small>Address : 영남대 멋사멋사멋사</small>
+                <small>멋쟁이 사자처럼 at YU</small>
               </p>
               <p className="text-muted">
-                <small>Phone : 비밀입니다</small>
+                <small>P/G : 김유빈</small>
               </p>
               <p className="text-muted">
-                <small>E-mail : 비밀입니다</small>
+                <small>Frontend : 조나원 최희진</small>
+              </p>
+              <p className="text-muted">
+                <small>Backend : 박주원 안형준 임태규</small>
               </p>
               <div className="social-media mt-4">
                 <a href="!#" className="text-light">
