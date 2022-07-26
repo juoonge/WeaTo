@@ -3,10 +3,11 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
 import datetime
+from webdriver_manager.chrome import ChromeDriverManager
 
 def Crawler(location):
     soups = []
-    driver = webdriver.Chrome(executable_path='C:/Users/User/WeaTo/weather/chromedriver.exe')
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     time.sleep(1)
     driver.get('https://www.naver.com/') # 네이버로 접속
     time.sleep(0.5)

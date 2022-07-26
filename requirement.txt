@@ -20,3 +20,5 @@ django-cors-headers
 selenium
 bs4
 Pillow
+django-apscheduler
+webdriver-manager
